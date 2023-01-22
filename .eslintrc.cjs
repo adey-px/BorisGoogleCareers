@@ -11,4 +11,12 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
   },
+  rules: {
+    "vue/script-indent": ["error", { baseIndent: 1 }],
+    "vue/style-indent": ["error", { baseIndent: 1 }],
+    "prettier/prettier": ["error", { endOfLine: "off" }],
+  },
 };
+
+
+// Set rules section 

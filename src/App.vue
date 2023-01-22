@@ -1,4 +1,18 @@
-<!--  -->
+<!-------------------  Imports all from components ----------------->
+
+<!-- template section -->
 <template>
-  <h1 class="m-4 text-center font-bold">Hello world</h1>
+  <NavBar />
 </template>
+
+<!-- script section -->
+<script>
+  import NavBar from "@/components/MainNav.vue";
+
+  export default {
+    name: "App",
+    components: {
+      NavBar,
+    },
+  };
+</script>
