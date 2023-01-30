@@ -1,4 +1,4 @@
-<!------------------ vue 2 options Api method ---------------------->
+<!------------------ vue 2 options-Api method ---------------------->
 
 <!-- template section -->
 <template>
@@ -10,9 +10,6 @@
         <a href="/" class="flex h-full items-center text-xl">
           {{ company }}
         </a>
-        <h2 class="ml-8 flex h-full items-center">
-          Developed by {{ author.firstName }} {{ author.lastName }}
-        </h2>
       </div>
     </div>
   </header>
@@ -25,10 +22,6 @@
     data() {
       return {
         company: "Google Careers",
-        author: {
-          firstName: "Oreofe",
-          lastName: "Stephen",
-        },
       };
     },
   };
