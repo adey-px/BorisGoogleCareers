@@ -7,21 +7,42 @@
       <div
         class="flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
-        <a href="/" class="flex h-full items-center text-xl">
+        <a :href="url" class="flex h-full items-center text-xl">
           {{ company }}
         </a>
+        <nav class="ml-12 h-full">
+          <ul class="flex h-full list-none">
+            <li
+              v-for="navLabel in navLabels"
+              :key="navLabel"
+              class="ml-9 h-full first:ml-0"
+            >
+              <a href="" class="flex h-full items-center py-2.5">
+                {{ navLabel }}
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
 </template>
-
 <!-- script section -->
 <script>
   export default {
-    name: "NavBar",
+    name: "MainNav",
     data() {
       return {
         company: "Google Careers",
+        url: "https://careers.google.com",
+        navLabels: [
+          "Teams",
+          "Locations",
+          "Life At Google",
+          "How We Hire",
+          "Students",
+          "Jobs",
+        ],
       };
     },
   };

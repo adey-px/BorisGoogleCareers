@@ -2,17 +2,18 @@
 
 <!-- template section -->
 <template>
-  <NavBar />
+  <main-nav />
 </template>
 
 <!-- script section -->
 <script>
-  import NavBar from "@/components/MainNav.vue";
+  // @ts-nocheck
+  import MainNav from "@/components/MainNav.vue";
 
   export default {
     name: "App",
     components: {
-      NavBar,
+      MainNav,
     },
   };
 </script>
