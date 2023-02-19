@@ -1,14 +1,12 @@
-<!-------------------  Imports all from components ----------------->
-
 <!-- template section -->
 <template>
-  <main-nav />
+  <MainNav />
 </template>
 
 <!-- script section -->
 <script>
   // @ts-nocheck
-  import MainNav from "@/components/MainNav.vue";
+  import MainNav from "./components/MainNav.vue";
 
   export default {
     name: "App",
