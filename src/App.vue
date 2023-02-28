@@ -1,17 +1,21 @@
+<!------------------ vue 2 options-Api method ---------------------->
+
 <!-- template section -->
 <template>
-  <MainNav />
+	<MainNav /> 
 </template>
 
 <!-- script section -->
 <script>
-  // @ts-nocheck
-  import MainNav from "./components/MainNav.vue";
+	import MainNav from './components/MainNav.vue';
 
-  export default {
-    name: "App",
-    components: {
-      MainNav,
-    },
-  };
+	export default {
+		name: 'App',
+		components: {
+			MainNav,
+		},
+	};
 </script>
+
+<!-- style section -->
+<style></style>

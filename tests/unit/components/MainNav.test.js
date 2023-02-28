@@ -1,10 +1,8 @@
 // @ts-nocheck
 import { render, screen } from '@testing-library/vue';
+import userEvent from '@testing-library/user-event';
 import MainNav from '@/components/MainNav.vue';
-import { UserEvent } from '@testing-library/user-event/dist/types/setup/setup';
-import { userEvent } from '@testing-library/user-event/dist/types/setup';
 
-//
 /* Test to assert on mainNav*/
 describe('MainNav', () => {
 	it('checks company name on mainNav', () => {
@@ -17,7 +15,9 @@ describe('MainNav', () => {
 	it('checks nav items on mainNav', () => {
 		render(MainNav);
 		const navItems = screen.getAllByRole('listitem');
-		const navLabels = navItems.map((item) => item.textContent);
+		const navLabels = navItems.map(
+			(item) => item.textContent
+		);
 		expect(navLabels).toEqual([
 			'Teams',
 			'Locations',
@@ -41,10 +41,10 @@ describe('MainNav', () => {
 			});
 			await userEvent.click(loginBtn);
 
-      let profileImg = screen.getByRole('img', {
-        name: /profile image/i,
-      });
-      expect(profileImg).toBeInTheDocument();
+			profileImg = screen.getByRole('img', {
+				name: /profile image/i,
+			});
+			expect(profileImg).toBeInTheDocument();
 		});
 	});
 });

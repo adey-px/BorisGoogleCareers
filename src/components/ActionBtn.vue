@@ -1,22 +1,34 @@
 <!-- template section -->
 <template>
 	<button
+		:class="btnClass"
 		@click="clickHandler"
-		:class="{ primary }"
 	>
 		{{ label }}
 	</button>
-</template>
+</template> 
+<!-- 
+If no computed prop, use :class="{primary}" 
+as option to btnClass.
+Type 'von' shortcut gives onClick (@click).
+-->
 
 <!-- script section -->
 <script>
 	export default {
 		name: 'ActionBtn',
-		props: ['label'],
+		props: ['type', 'label'],
 		data() {
-			return {
-				primary: true,
-			};
+			return {};
+		},
+		computed: {
+			btnClass() {
+				return {
+					[this.type]: true
+					// primary: this.type === 'primary',
+					// secondary: this.type === 'secondary',
+				};
+			},
 		},
 		methods: {
 			clickHandler(event) {
@@ -26,16 +38,17 @@
 	};
 </script>
 
-<!-- 
-Type 'von' shortcut gives onClick (@click)
--->
-
+<!-- style section -->
 <style scoped>
 	button {
-		@apply rounded px-5 py-3 font-medium;
+		@apply rounded px-2 py-3 font-medium;
 	}
 
 	.primary {
 		@apply border-0 bg-brand-blue-1 text-white hover:shadow-blue;
+	}
+
+	.secondary {
+		@apply bg-transparent text-brand-blue-1 hover:bg-brand-blue-2 hover:text-white;
 	}
 </style>

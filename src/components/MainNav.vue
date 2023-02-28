@@ -1,5 +1,3 @@
-<!------------------ vue 2 options-Api method ---------------------->
-
 <!-- template section -->
 <template>
 	<header class="w-full text-sm">
@@ -32,8 +30,9 @@
 				<div class="ml-auto flex h-full items-center">
 					<ProfileImg v-if="isLoggedIn" />
 					<ActionBtn
-						label="Sign In"
 						v-else
+						type="primary"
+						label="Sign In"
 						@click="authUser"
 					/>
 				</div>
