@@ -41,7 +41,7 @@
 			</div>
 
 			<!-- lower nav component -->
-			<LowerNav />
+			<LowerNav v-if="isLoggedIn" />
 		</div>
 	</header>
 </template>

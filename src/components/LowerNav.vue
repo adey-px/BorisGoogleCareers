@@ -6,7 +6,8 @@
 				:icon="['fa-solid', 'search']"
 				class="mr-3"
 			/>
-			<span><span class="text-brand-green-1">1660</span> jobs matched</span>
+			<span class="text-brand-green-1">1660</span>
+			<span class="ml-1">jobs matched</span>
 		</div>
 	</div>
 </template>
