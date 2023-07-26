@@ -1,8 +1,10 @@
-<!------------------ vue 2 options-Api method ---------------------->
+<!-- 
+	Vue 2 using options-Api method 
+-->
 
 <!-- template section -->
 <template>
-	<MainNav /> 
+	<MainNav />
 </template>
 
 <!-- script section -->
