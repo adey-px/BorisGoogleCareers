@@ -1,4 +1,4 @@
-<!-- template section -->
+<!-- Template section -->
 <template>
 	<button
 		:class="btnClass"
@@ -8,12 +8,14 @@
 	</button>
 </template> 
 <!-- 
-If no computed prop, use :class="{primary}" 
-as option to btnClass.
-Type 'von' shortcut gives onClick (@click).
+	If no computed prop, use :class="{primary}" 
+	as option to btnClass.
+	Type 'von' shortcut gives onClick (@click).
 -->
 
-<!-- script section -->
+<!-- 
+	Script section 
+-->
 <script>
 	export default {
 		name: 'ActionBtn',
@@ -38,7 +40,9 @@ Type 'von' shortcut gives onClick (@click).
 	};
 </script>
 
-<!-- style section -->
+<!-- 
+	Style section 
+-->
 <style scoped>
 	button {
 		@apply rounded px-2 py-3 font-medium;

@@ -1,43 +1,4 @@
-<!-- 
-	Script section 
--->
-<script>
-	import ActionBtn from './ActionBtn.vue';
-	import ProfileImg from './ProfileImg.vue';
-	import LowerNav from './LowerNav.vue';
-
-	export default {
-		name: 'MainNav',
-		components: {
-			ActionBtn,
-			ProfileImg,
-			LowerNav,
-		},
-		data() {
-			return {
-				logo: 'Google Careers',
-				url: 'https://careers.google.com',
-				navLabels: ['Teams', 'Locations', 'Life At Google', 'How We Hire', 'Students', 'Jobs'],
-				isLoggedIn: false,
-			};
-		},
-		methods: {
-			userAuth() {
-				this.isLoggedIn = true;
-			},
-		},
-	};
-</script>
-
-<!-- Note
-	methods: {} is used to update state
-  of items in data() {} using this keyword.
--->
-
-
-<!-- 
-	Template section 
--->
+<!-- Template section -->
 <template>
 	<header class="w-full text-sm">
 		<div class="fixed top-0 left-0 h-16 w-full bg-white">
@@ -84,3 +45,39 @@
 		</div>
 	</header>
 </template>
+
+<!-- 
+	Script section 
+-->
+<script>
+	import ActionBtn from './ActionBtn.vue';
+	import ProfileImg from './ProfileImg.vue';
+	import LowerNav from './LowerNav.vue';
+
+	export default {
+		name: 'MainNav',
+		components: {
+			ActionBtn,
+			ProfileImg,
+			LowerNav,
+		},
+		data() {
+			return {
+				logo: 'Google Careers',
+				url: 'https://careers.google.com',
+				navLabels: ['Teams', 'Locations', 'Life At Google', 'How We Hire', 'Students', 'Jobs'],
+				isLoggedIn: false,
+			};
+		},
+		methods: {
+			userAuth() {
+				this.isLoggedIn = true;
+			},
+		},
+	};
+</script>
+
+<!-- Note
+	methods: {} is used to update state
+  of items in data() {} using this keyword.
+-->

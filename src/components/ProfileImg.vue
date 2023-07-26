@@ -1,4 +1,4 @@
-<!-- template section -->
+<!-- Template section -->
 <template>
 	<div>
 		<img
@@ -9,11 +9,13 @@
 	</div>
 </template>
 <!-- 
-use 'v-bind:' or shortcut ':' to indicate the prop 
-is JS related, not just a regular string 
+	use 'v-bind:' or shortcut ':' to indicate the prop 
+	is JS related, not just a regular string 
 -->
 
-<!-- script section -->
+<!-- 
+	Script section 
+-->
 <script>
 	export default {
 		name: 'ProfileImg',
