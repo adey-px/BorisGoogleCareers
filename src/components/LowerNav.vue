@@ -1,6 +1,14 @@
 <!-- Template section -->
 <template>
-	<div>This is the LowerNav</div>
+	<div class="h-16 w-full border-b border-solid border-brand-gray-1 bg-white">
+		<div class="flex h-full items-center px-8">
+			<font-awesome
+				:icon="['fa-solid', 'search']"
+				class="mr-3"
+			/>
+			<span><span class="text-brand-green-1">1660</span> jobs matched</span>
+		</div>
+	</div>
 </template>
 
 <!-- 
