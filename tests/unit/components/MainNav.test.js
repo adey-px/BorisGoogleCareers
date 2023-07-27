@@ -5,9 +5,19 @@ import MainNav from '@/components/MainNav.vue';
  * Unit testing on MainNav
  */
 describe('Unit test on MainNav Component', () => {
+	const renderMainNav = () => {
+		render(MainNav, {
+			global: {
+				stubs: {
+					FontAwesomeIcon: true,
+				},
+			},
+		});
+	};
+
 	describe('when user on home page', () => {
 		it('show company name on main nav', () => {
-			render(MainNav);
+			renderMainNav();
 			const companyName = screen.getByText('Google Careers');
 			expect(companyName).toBeInTheDocument();
 		});
@@ -15,7 +25,7 @@ describe('Unit test on MainNav Component', () => {
 
 	describe('when user on home page', () => {
 		it('show nav items on main nav', () => {
-			render(MainNav);
+			renderMainNav();
 			const navItems = screen.getAllByRole('listitem');
 			const navLabels = navItems.map((item) => item.textContent);
 			expect(navLabels).toEqual(['Teams', 'Locations', 'Life At Google', 'How We Hire', 'Students', 'Jobs']);
@@ -24,7 +34,7 @@ describe('Unit test on MainNav Component', () => {
 
 	describe('main nav state before and after login', () => {
 		it('when to show user profile image', async () => {
-			render(MainNav);
+			renderMainNav();
 			let profileImg = screen.queryByRole('img', {
 				name: /profile image/i,
 			});

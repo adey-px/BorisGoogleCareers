@@ -9,4 +9,4 @@ import '@/globals.css';
 library.add(faSearch);
 
 // Set font awesome as component to Vue App
-createApp(App).component('font-awesome', FontAwesomeIcon).mount('#app');
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');

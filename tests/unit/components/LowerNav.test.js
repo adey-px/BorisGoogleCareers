@@ -7,6 +7,11 @@ describe('Unit test on LowerNav Component', () => {
 	describe('when user on jobs page', () => {
 		it('display job count', () => {
 			render(LowerNav, {
+				global: {
+					stubs: {
+						FontAwesomeIcon: true,
+					},
+				},
 				data() {
 					return {
 						jobSearchResultPage: true,
@@ -21,6 +26,11 @@ describe('Unit test on LowerNav Component', () => {
 	describe('when user NOT on jobs page', () => {
 		it('does not display job count', () => {
 			render(LowerNav, {
+				global: {
+					stubs: {
+						FontAwesomeIcon: true,
+					},
+				},
 				data() {
 					return {
 						jobSearchResultPage: false,

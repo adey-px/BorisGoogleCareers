@@ -1,5 +1,5 @@
 /** 
- TDD with vitest, jest-dom & user-event 
+ TDD config with vitest, jest-dom & user-event 
 */
 import { cleanup } from "@testing-library/vue";
 import { expect, afterEach } from "vitest";
