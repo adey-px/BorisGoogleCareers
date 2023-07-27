@@ -1,35 +1,29 @@
-// @ts-nocheck
 import { render, screen } from '@testing-library/vue';
 import userEvent from '@testing-library/user-event';
 import MainNav from '@/components/MainNav.vue';
-
-/* Test to assert on mainNav*/
-describe('MainNav', () => {
-	it('checks company name on mainNav', () => {
-		render(MainNav);
-		// screen.debug();
-		const companyName = screen.getByText('Google Careers');
-		expect(companyName).toBeInTheDocument();
+/**
+ * Unit testing on MainNav
+ */
+describe('Unit test on MainNav Component', () => {
+	describe('when user on home page', () => {
+		it('show company name on main nav', () => {
+			render(MainNav);
+			const companyName = screen.getByText('Google Careers');
+			expect(companyName).toBeInTheDocument();
+		});
 	});
 
-	it('checks nav items on mainNav', () => {
-		render(MainNav);
-		const navItems = screen.getAllByRole('listitem');
-		const navLabels = navItems.map(
-			(item) => item.textContent
-		);
-		expect(navLabels).toEqual([
-			'Teams',
-			'Locations',
-			'Life At Google',
-			'How We Hire',
-			'Students',
-			'Jobs',
-		]);
+	describe('when user on home page', () => {
+		it('show nav items on main nav', () => {
+			render(MainNav);
+			const navItems = screen.getAllByRole('listitem');
+			const navLabels = navItems.map((item) => item.textContent);
+			expect(navLabels).toEqual(['Teams', 'Locations', 'Life At Google', 'How We Hire', 'Students', 'Jobs']);
+		});
 	});
 
-	describe('MainNav state before and after login', () => {
-		it('checks display of profile pic', async () => {
+	describe('main nav state before and after login', () => {
+		it('when to show user profile image', async () => {
 			render(MainNav);
 			let profileImg = screen.queryByRole('img', {
 				name: /profile image/i,
@@ -49,7 +43,7 @@ describe('MainNav', () => {
 	});
 });
 
-/* 
+/* Note:
 - Use screen.debug to inspect html of component in terminal.
 - Roles are found in browser -inspect-Accessibilty.
 - In checking profile pic, name refers value of image 'alt',

@@ -10,7 +10,9 @@
   - Vue
   - Tailwind
   - Pinia
-  - Jest
-  - Vitest
   - Eslint
   - Prettier
+  - Jest
+  - Vitest
+  - Testing Library
+  - Cypress
