@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/vue';
 import ActionBtn from '@/components/ActionBtn.vue';
 /**
- * Unit testing on ActionBtn 
+ * TDD Unit testing on ActionBtn
+ * - with Testing Library
  */
 describe('Unit test on ActionBtn Component', () => {
 	describe('when unAuth user on home page', () => {

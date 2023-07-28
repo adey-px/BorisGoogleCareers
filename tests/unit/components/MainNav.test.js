@@ -2,7 +2,8 @@ import { render, screen } from '@testing-library/vue';
 import userEvent from '@testing-library/user-event';
 import MainNav from '@/components/MainNav.vue';
 /**
- * Unit testing on MainNav
+ * TDD Unit testing on MainNav
+ * - with Testing Library
  */
 describe('Unit test on MainNav Component', () => {
 	const renderMainNav = () => {

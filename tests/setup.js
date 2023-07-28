@@ -1,5 +1,6 @@
 /** 
- TDD config with vitest, jest-dom & user-event 
+ TDD config using testing library, vitest & jest-dom
+ - set as globals under test:{} in root/vite.config
 */
 import { cleanup } from "@testing-library/vue";
 import { expect, afterEach } from "vitest";

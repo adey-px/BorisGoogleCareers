@@ -1,28 +1,25 @@
-import { defineConfig } from "vite";
-import { fileURLToPath, URL } from "node:url";
-import vue from "@vitejs/plugin-vue";
-
-// https://vitejs.dev/config/
-
-//
+import { defineConfig } from 'vite';
+import { fileURLToPath, URL } from 'node:url';
+import vue from '@vitejs/plugin-vue';
+/**
+ * https://vitejs.dev/config/
+ */
 export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
-  test: {
-    globals: true,
-    setupFiles: ['./tests/setup.js']
-  },
+	plugins: [vue()],
+	resolve: {
+		alias: {
+			'@': fileURLToPath(new URL('./src', import.meta.url)),
+		},
+	},
+	test: {
+		globals: true,
+		setupFiles: ['./tests/setup.js'],
+	},
 });
 
-//NB:
-/* 
-  - Add 'test: {}' section to make vue-test-utils 
-    watch all project files
-  - Install eslint-plugin-vitest-globals 
-  
-  - Only add setupFiles for vitest
+/*
+  Note:
+  - add 'test: {}' above makes vitest watch all files
+  - install eslint-plugin-vitest-globals 
+  - add setupFiles for vitest use only
 */

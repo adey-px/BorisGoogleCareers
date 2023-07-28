@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/vue';
 import LowerNav from '@/components/LowerNav.vue';
 /**
- * Unit testing on LowerNav
+ * TDD Unit testing on LowerNav
+ * - with Testing Library
  */
 describe('Unit test on LowerNav Component', () => {
 	describe('when user on jobs page', () => {
